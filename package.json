@@ -6,7 +6,6 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
     "start": "node server.js",
-    "build": "npm start",
     "test:coverage":"npm run test -- --coverage"
   },
   "author": "Digvijay Panwar",
