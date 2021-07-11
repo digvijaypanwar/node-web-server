@@ -4,12 +4,25 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
+    "start": "node server.js",
+    "build": "npm start",
+    "test:coverage":"npm run test -- --coverage"
   },
   "author": "Digvijay Panwar",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "supertest": "^6.1.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
